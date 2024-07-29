@@ -1,0 +1,41 @@
+ul{
+  position: fixed;
+  list-style:  none;
+  & li{
+      color: #E7E9EA;
+      background-color: transparent;
+      transition: 0.3s;
+      padding: 10px;
+  }
+  & li:hover{
+      border: none;
+      border-radius: 20px;
+      background-color: var(--hover-color);
+  }
+}
+.postbtn{
+  background-color: #1ea5ff;
+  margin-top: 10px;
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 110px;
+  border: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.postbtn:hover{
+  background-color: var(--third-color);
+}
+.maintxt{
+  color: #E7E9EA;
+}
+.profile{
+  border: none;
+  transition: 0.3s;
+  .extag{
+    color:#b3b3b3;
+  }
+}
+

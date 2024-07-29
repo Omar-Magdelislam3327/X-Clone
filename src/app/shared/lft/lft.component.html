@@ -1,0 +1,50 @@
+  <div>
+    <div class="links">
+        <ul class="list-unlisted">
+            &numsp;
+            <img routerLink="/home" src="assets/vendors/imgs/twitter-x-logo.png" alt="" />
+            <li class="fs-5">
+              <a class="text-reset text-decoration-none" routerLink="/home"><i class="bi bi-house-door-fill  fs-4 me-2"></i><span>Home</span></a>
+            </li>
+            <li class="fs-5">
+                <a class="text-reset text-decoration-none" routerLink="/explore"><i class="fa-solid fa-magnifying-glass fs-4 me-2"></i>
+                  <span>Explore</span></a>
+            </li>
+            <li class="fs-5">
+                <a class="text-reset text-decoration-none" routerLink="/notifications"><i class="fa-regular fa-bell fs-4 me-2"></i>
+                  <span>Notifications</span></a>
+            </li>
+            <li class="fs-5">
+                <a class="text-reset text-decoration-none" routerLink="/messages"><i class="fa-regular fa-envelope fs-4 me-2"></i>
+                  <span>Messages</span></a>
+            </li>
+            <li class="fs-5">
+                <i class="fa-solid fa-user-group fs-4 me-2"></i>
+                <span>Communities</span>
+            </li>
+            <li class="fs-5">
+                <a class="text-reset text-decoration-none" routerLink="/lists"><i class="fa-solid fa-list fs-4 me-2"></i> <span>Lists</span></a>
+            </li>
+            <li class="fs-5">
+              <a class="text-reset text-decoration-none" routerLink="/profile"><i class="fa-regular fa-user fs-4 me-2"></i> <span>Profile</span>
+              </a>
+            </li>
+            <li class="fs-5">
+                <i class="fa-solid fa-ellipsis fs-4 me-2"></i> <span>More</span>
+            </li>
+            <button class="postbtn">Post</button>
+            <div class="profile">
+                <a routerLink="/profile" class="text-reset text-decoration-none justify-content-start d-flex align-items-center">
+                  <div class="imag mt-4">
+                    <img width="50" class="rounded-circle" src="{{user.image}}" alt="" />
+                </div>
+                <div class="txt ms-4 mt-5" *ngIf="user">
+                      <p class="fw-bold maintxt m-0">{{user.name}}</p>
+                      <p class="extag">{{user.hashtag}}</p>
+                </div>
+                </a>
+            </div>
+        </ul>
+    </div>
+  </div>
+

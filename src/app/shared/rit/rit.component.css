@@ -1,0 +1,123 @@
+.rit{
+  overflow: hidden;
+}
+.subscribe{
+  border: 1px solid #2F3336;
+  border-radius: 20px;
+  h4{
+      font-weight: bold;
+  }
+  & .post-btn{
+      padding: 5px 18px;
+      background-color: #1D9BF0;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+  }
+}
+input{
+  background-color: var(--second-color);
+  border: 1px solid transparent !important;
+  border-radius: 20px;
+  padding: 12px;
+  width: 100%;
+  transition: 0.3s;
+}
+input:focus{
+  background-color: black;
+  border: 1px solid var(--third-color) !important;
+}
+.hashtag{
+  border: 1px solid #2F3336;
+  border-radius: 20px;
+  margin-top: 20px;
+  align-items: stretch;
+  box-sizing: border-box;
+  & .hashname , .title{
+      color: #E7E9EA;
+  }
+  & .extag{
+      color: #474A4F;
+  }
+  & .btn-hash{
+      background-color: transparent;
+      border: none;
+      color: #E7E9EA;
+  }
+  & .trend{
+      transition: 0.3s;
+      border: none;
+      align-items: stretch;
+      box-sizing: border-box;
+      padding-left: 15px !important;
+      padding-top: 5px !important;
+  }
+  & .trend-show{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    & a{
+          text-decoration: none;
+          color: var(--third-color);
+      }
+  }
+  & .fa-ellipsis{
+      transition: 0.2s;
+      padding: 10px !important;
+      border: none;
+      border-radius: 50%;
+  }
+  & .fa-ellipsis:hover{
+      color: var(--third-color);
+      background-color: #1D2C37;
+
+  }
+  & .trend:hover{
+      background-color: #1D1F23;
+  }
+}
+.follow{
+  border: 1px solid #2F3336;
+  border-radius: 20px;
+  margin-top: 20px;
+  align-items: stretch;
+  box-sizing: border-box;
+  & .title{
+      color: #E7E9EA;
+  }
+  & .profile{
+      transition: 0.3s;
+      border: none;
+      align-items: stretch;
+      box-sizing: border-box;
+      padding-left: 15px !important;
+  }
+  & .profile-show{
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      & a{
+          text-decoration: none;
+          color: var(--third-color);
+      }
+  }
+  & .profile:hover{
+      background-color: #1D1F23;
+  }
+  & .extag{
+      color: #474A4F;
+  }
+  & .follow-btn{
+      padding-right: 15px !important;
+      & button{
+      padding: 3px 15px;
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      color: var(--main-color);
+      font-weight: 500;
+      transition: 0.3s;
+
+  }
+}
+}

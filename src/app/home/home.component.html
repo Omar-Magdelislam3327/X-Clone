@@ -1,0 +1,80 @@
+<div class="text-center">
+  <div class="home">
+      <nav class="mob-nav">
+          <div class="mob d-lg-none d-md-none d-sm-block text-center text-white p-2">
+              <i class="fa-brands fa-x-twitter fs-1"></i>
+          </div>
+          <div class="nav d-flex align-items-center justify-content-center">
+              <div class="for col-6">
+                  <p class="fw-bold">For you</p>
+              </div>
+              <div class="following col-6">
+                  <p class="fw-bold text-white-50">Following</p>
+              </div>
+          </div>
+      </nav>
+      <div class="newnav d-lg-none d-md-none d-sm-block">
+          <div class="nav p-1">
+              <i class="bi bi-house-door-fill fs-1 text-white"></i>
+              <i class="fa-solid fa-magnifying-glass fs-1 text-white"></i>
+              <i class="fa-regular fa-bell fs-1 text-white"></i>
+              <i class="fa-regular fa-envelope fs-1 text-white"></i>
+              <i class="fa-solid fa-list fs-1 text-white"></i>
+              <i class="fa-solid fa-user-group fs-1 text-white"></i>
+          </div>
+      </div>
+
+      <section class="tweet">
+          <div class="upper pt-3 ps-3 d-flex align-items-center text-center gap-3">
+              <img class="img-fluid rounded-circle" src="assets/vendors/imgs/profile.jpg" alt="">
+              <input type="text" placeholder="What is happening?!" name="post" id="post" #tweet="ngModel" [(ngModel)]="post.caption" class="tweetinput p-3">
+          </div>
+          <div class="lower d-flex justify-content-between pb-2">
+              <div class="icons ms-5">
+                  <i class="fa-regular fa-image"></i>
+                  <i class="fa-regular fa-file-image"></i>
+                  <i class="fa-solid fa-list"></i>
+                  <i class="fa-regular fa-face-smile"></i>
+                  <i class="fa-regular fa-calendar"></i>
+                  <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="post-btn pe-2">
+                  <button (click)="newTweet()">Post</button>
+              </div>
+          </div>
+      </section>
+      <section class="show-more text-center">
+          <a href="">Show 33 posts</a>
+      </section>
+      <section class="post post-ar" *ngFor="let tweet of tweets">
+          <div class="upper pt-3 ps-3 d-flex align-items-center justify-content-start text-center gap-3 p-0 ">
+              <div class="imag">
+                  <img class="img-fluid rounded " src="{{tweet.logo}}" alt="">
+              </div>
+              <div class="txt d-flex flex-column align-items-center justify-content-center">
+              <div class="user d-flex align-items-center justify-content-start gap-2">
+                  <p class="p-0 username">{{tweet.accName}}</p>
+                  <p class="p-0 other">{{tweet.hashtag}}</p>
+                  <p class="p-0 other">{{tweet.date}}</p>
+              </div>
+          </div>
+      </div>
+      <div class="caption text-end">
+          <p class="me-3 text-white">{{tweet.caption}}</p>
+      </div>
+          <img class="pb-2 rounded ms-auto pe-2 d-block img-fluid col-11" src="{{tweet.image}}" onclick="openImage(this.src)" alt="">
+          <div class="icons2 d-flex gap-5 justify-content-between">
+              <div class="lft ms-lg-5">
+                  <i class="fa-regular fa-comment"></i>{{tweet.comments}}
+                  <i class="fa-solid fa-retweet"></i>{{tweet.retweet}}
+                  <i class="fa-regular fa-heart"></i>{{tweet.heart}}
+                  <i class="fa-regular fa-eye"></i>{{tweet.views}}
+              </div>
+              <div class="rigt me-lg-3">
+                  <i class="fa-regular fa-bookmark"></i>
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+          </div>
+      </section>
+  </div>
+</div>

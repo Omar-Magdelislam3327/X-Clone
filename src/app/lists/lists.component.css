@@ -1,0 +1,119 @@
+.lists{
+  border: 1px solid #2F3336;
+  padding: 0;
+  & nav{
+      position: sticky;
+      top: 0;
+      background-color: transparent;
+      backdrop-filter: blur(10px);
+      & .fa-square-plus , .fa-ellipsis , .fa-arrow-left-long{
+          background-color: transparent;
+          color: #E7E9EA;
+          padding: 10px;
+          border: none;
+          border-radius: 50%;
+          transition: 0.3s;
+      }
+      & .fa-square-plus:hover , .fa-ellipsis:hover , .fa-arrow-left-long:hover{
+          background-color: #181818;
+      }
+  }
+  & .main{
+      border-bottom: 1px solid #2F3336;
+      & p{
+          color: #575B5F;
+
+      }
+  }
+  .title-up{
+      color: #E7E9EA;
+      font-weight: 700;
+      text-align: start !important;
+  }
+
+  & .post:hover{
+      background-color: #0f0f0f;
+  }
+}
+.discover{
+  border-bottom: 1px solid #2F3336;
+
+  & h4{
+      color: #E7E9EA;
+      font-weight: 900;
+      padding-left: 15px;
+      padding-top: 10px;
+  }
+  & p{
+      color: #71767B;
+  }
+  & .fa-plus{
+      color: var(--main-color);
+      background-color: #E7E9EA;
+      padding: 10px;
+      border-radius: 50%;
+      transition: 0.3s;
+  }
+  & .fa-plus:hover{
+      background-color: rgb(184, 184, 184);
+  }
+  & .follower{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: -9px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+}
+.list1{
+  padding-top: 5px;
+  transition: 0.3s;
+}
+.list1:hover{
+  background-color: #181818;
+}
+.list2{
+  padding-top: 5px;
+  transition: 0.3s;
+}
+.list2:hover{
+  background-color: #181818;
+}
+.list3{
+  padding-top: 5px;
+  transition: 0.3s;
+}
+.list3:hover{
+  background-color: #181818;
+}
+.last{
+  & h4{
+      color: #E7E9EA;
+      font-weight: 900;
+      padding-left: 15px;
+      padding-top: 10px;
+  }
+  & p{
+      color: #474A4F;
+      padding-top: 30px;
+  }
+}
+input{
+  background-color: var(--second-color);
+  border: transparent 1px solid !important;
+  border-radius: 20px;
+  padding: 12px;
+  width: 60%;
+  transition: 0.3s;
+}
+input:focus{
+  background-color: black;
+  border: 1px solid var(--third-color) !important;
+}
+.icon{
+  cursor: pointer;
+}

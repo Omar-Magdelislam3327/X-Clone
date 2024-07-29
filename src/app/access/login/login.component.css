@@ -1,0 +1,137 @@
+.login{
+  & .imag img{
+      width: 300px;
+  }
+  & .txt{
+      & .title{
+          & h2{
+              font-weight: 900;
+              color: #E7E9EA;
+              font-size: 68px;
+          }
+          & h4{
+              font-weight: 700;
+              color: #E7E9EA;
+              font-size: 28px;
+          }
+      }
+      & .signs{
+              & .btn-sign{
+                  padding: 8px 58px;
+                  border: none;
+                  border-radius: 20px;
+                  color: white;
+                  font-weight: 700;
+                  margin: 8px 0;
+                  background-color: var(--third-color);
+              }
+
+              & .sign3{
+                  & p{
+                      font-size: 12px !important;
+                      text-wrap: wrap;
+                      width: 50%;
+                      & a{
+                          text-decoration: none;
+                      }
+                  }
+              }
+
+      }
+  }
+}
+.btn-s1{
+  color: #0F1419 !important;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  margin: 8px 0;
+  text-align: center;
+  justify-content: center;
+  i{
+      font-size: 20px;
+  }
+}
+.btn-s2{
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #0F1419;
+  padding: 8px 20px !important;
+  text-align: center;
+  justify-content: center;
+}
+.btnssign{
+  .btn-s1{
+    background-color: white;
+    color: #0F1419 !important;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    margin: 8px 0;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    transition: 0.3s;
+    i{
+        font-size: 20px;
+    }
+  }
+  .btn-s2{
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: white;
+    font-weight: 700;
+    margin: 8px 0;
+    color: #0F1419;
+    padding: 8px 20px !important;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    transition: 0.3s;
+  }
+  .btn-s1:hover , .btn-s2:hover {
+    background-color: whitesmoke;
+  }
+}
+.sign-in{
+  padding: 8px 60px;
+  border: 1px solid #E7E9EA;
+  border-radius: 20px;
+  background-color: black;
+  color: var(--third-color);
+  transition: 0.3s;
+}
+.sign-in:hover{
+  background-color: #1a8cd82f;
+}
+
+.form-label{
+  color: #777b80;
+}
+.form-control{
+  background-color: transparent;
+  border: 1px solid var(--hover-color);
+  outline: none;
+  color: whitesmoke;
+}
+.form-control:focus{
+  border: 1px solid var(--third-color);
+  outline: none !important;
+  box-shadow: none !important;
+}
+.form-group:focus-within .form-label{
+  color: var(--third-color) !important;
+}
+.signinto{
+  color: #CACCCD;
+}

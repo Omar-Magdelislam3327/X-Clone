@@ -1,0 +1,81 @@
+{
+  "post": [
+    {
+      "id": "1",
+      "logo": "assets\\vendors\\imgs\\Liverpool_FC.png",
+      "accName": "نادي ليفربول",
+      "hashtag": "@LFC-Arabic",
+      "date": "22h",
+      "caption": "القائد ©️",
+      "image": "assets\\vendors\\imgs\\liverpol.jpeg",
+      "comments": "23k",
+      "retweet": "521",
+      "heart": "800k",
+      "views": "1.1m"
+    },
+    {
+      "id": "2",
+      "logo": "assets\\vendors\\imgs\\pl.jpg",
+      "accName": "الدوري الإنجليزي™",
+      "hashtag": "@TrendEPL",
+      "date": "2h",
+      "caption": "— هدافين اليورو حاليًا. 🔥",
+      "image": "assets\\vendors\\imgs\\euro.jpeg",
+      "comments": "8",
+      "retweet": "21",
+      "heart": "80",
+      "views": "12k"
+    },
+    {
+      "id": "3",
+      "logo": "assets\\vendors\\imgs\\salah.jpg",
+      "accName": "Mohamed Salah",
+      "hashtag": "@MoSalah",
+      "date": "3d",
+      "image": "assets\\vendors\\imgs\\salahh.jpeg",
+      "comments": "2k",
+      "retweet": "521",
+      "heart": "1m",
+      "views": "4.1m"
+    },
+    {
+      "id": "4",
+      "logo": "assets\\vendors\\imgs\\inter.jpg",
+      "accName": "إنتر",
+      "hashtag": "@IFC",
+      "date": "1d",
+      "caption": "الصور الأولى كنيراتزوري 📸🖤💙",
+      "image": "assets\\vendors\\imgs\\interr.jpeg",
+      "comments": "12",
+      "retweet": "52",
+      "heart": "8k",
+      "views": "1.1m"
+    },
+    {
+      "date": "now",
+      "comments": "0",
+      "retweet": "0",
+      "heart": "0",
+      "view": "0",
+      "logo": "assets\\vendors\\imgs\\logo.jpg",
+      "accName": "Omar3327",
+      "hashtag": "@Omar3327436158",
+      "caption": "السلام عليكم ورحمة الله وبركاته",
+      "id": "W_R3OtK"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "Omar Magdelislam",
+      "hashtag": "@Omar3327436158",
+      "email": "omar3327@gmail.com",
+      "password": "123456",
+      "image": "assets\\vendors\\imgs\\anoth.jpg",
+      "background": "assets\\vendors\\imgs\\backtwo.jpg",
+      "bio": "I'm a Full stack developer",
+      "location": "Alexandria , Egypt",
+      "website": ""
+    }
+  ]
+}

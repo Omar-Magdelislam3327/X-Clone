@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row justify-content-around">
+    <div class="col-lg-3 d-none d-lg-block" *ngIf="shouldShowSidebars()">
+      <app-lft></app-lft>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-lg-3 d-none d-xl-block" *ngIf="shouldShowright() && shouldShowSidebars()">
+      <app-rit></app-rit>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+@media(max-width:1115px){
+  .col-2{
+      .postbtn{
+          display: none !important;
+      }
+  }
+}
+@media(max-width:992px){
+  .col-3{
+      display: none;
+  }
+  .col-2{
+      display: none;
+  }
+  .home{
+      border: none;
+  }
+}
+:root{
+  --main-color:#080808;
+  --second-color:#16181C;
+  --third-color:#1A8CD8;
+  --hover-color:#181818;
+}
+body{
+  background-color: black;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #424242;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background:#7B7B7B;
+
+}
+html, body, .container-fluid, .row {
+  height: 100%;
+}
+
+.col-md-3, .col-md-6 {
+  height: 100%;
+}
+& .newnav{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  border-top: 1px solid #2F3336;
+  opacity: 1;
+  transition: 0.3s;
+  & .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+  }
+}
+& .post{
+  padding-bottom: 5px;
+  /* border-bottom: 1px solid #2F3336; */
+  transition: 0.2s;
+  & .username{
+      color: #E7E9EA;
+      font-weight: 700;
+  }
+  & .other{
+      color: #575B5F;
+  }
+  & .icons2{
+      color: #6D787F;
+  }
+  & .icons2 i{
+      padding: 12px;
+      font-size: 18px;
+      color: #575B5F;
+      background-color: transparent;
+      border: none;
+      border-radius: 50%;
+      transition: 0.2s;
+  }
+  & .fa-comment:hover , .fa-eye:hover , .fa-bookmark:hover , .fa-arrow-up-from-bracket:hover{
+      color: #1D9BF0;
+      background-color: #0A171F;
+  }
+  & .fa-retweet:hover{
+      color: #00BA7C;
+      background-color: #071A14;
+  }
+  & .fa-heart:hover{
+      color: #C41566;
+      background-color: #200914;
+  }
+}
+& .post:hover{
+  background-color: #0f0f0f;
+}
+@media (max-width:1115px) {
+  ul{
+    width: 100px !important;
+    span{
+      display: none;
+    }
+    .postbtn{
+      display: none;
+    }
+    .txt{
+      display: none;
+    }
+  }
+  .col{
+    width: 900px;
+  }
+}
+.modal-content {
+  background-color: black;
+  border: 1px solid var(--hover-color);
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 98765433333;
+}
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  border-top: none;
+}
+.btn-close{
+  background-color: white !important;
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,91 @@
+<div class="container login">
+  <div class="row align-items-center jusify-content-around pt-lg-5 mt-lg-5">
+    <div class="col-6 imag text-center">
+      <img src="assets/vendors/imgs/login.png" alt="">
+    </div>
+    <div class="col-6 txt">
+      <div class="title">
+        <h2 class="pb-5">Happening now</h2>
+        <h4>Join today.</h4>
+      </div>
+      <div class="signs text-start">
+
+
+        <button class=" btn-s2 d-flex align-items-center gap-2"><img
+            src="assets/vendors/imgs/Google__G__logo.svg (1).png" alt="">
+          <p class="p-0 m-0">Sign in with Google</p>
+        </button>
+
+        <button class=" btn-s1 d-flex align-items-center gap-2"><i class="fa-brands fa-apple"></i>
+          <p class="p-0 m-0">Sign up with Apple</p>
+        </button>
+        <div class="sign3">
+          <button class="btn-sign" (click)="open(content2)">Create account</button>
+          <p class="text-white-50">By signing up, you agree to the <a href="">Terms of Service</a> and <a
+              href="">Privacy Policy</a>, including <a href="">Cookie Use.</a></p>
+        </div>
+      </div>
+
+      <ng-template #content let-modal>
+        <i class="fa-brands fa-x-twitter text-center text-white fs-2 mb-4"></i>
+        <h3 class="text-center signinto fw-bold mb-5">Sign in to X</h3>
+        <div class="btnssign text-center ">
+
+          <button class=" btn-s2 d-flex align-items-center gap-2 mb-3"><img
+              src="assets/vendors/imgs/Google__G__logo.svg (1).png" alt="">
+            <p class="p-0 m-0">Sign in with Google</p>
+          </button>
+
+          <button class=" btn-s1 d-flex align-items-center gap-2"><i class="fa-brands fa-apple"></i>
+            <p class="p-0 m-0">Sign up with Apple</p>
+          </button>
+
+        </div>
+        <p class="text-center text-white mt-3">or</p>
+
+        <div class="form-group1 pe-5 ps-5">
+          <form action="" method="post">
+            <div class="form-group">
+              <label class="form-label" for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" #email="ngModel"
+                [(ngModel)]="user.email">
+            </div>
+            <div class="form-group mt-3">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" #password="ngModel"
+                [(ngModel)]="user.password">
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary  mt-4" (click)="submit()">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+      <p class="text-white fw-bold">Already have account?</p>
+      <button class="sign-in" (click)="open(content)">Sign in</button>
+    </div>
+  </div>
+</div>
+<ng-template #content2 let-modal>
+  <h3 class="text-center text-white fw-bold mb-5">Create new account</h3>
+  <div class="form-group2 pe-5 ps-5">
+    <form action="" method="post">
+      <div class="form-group">
+        <label class="form-label" for="name">Username</label>
+        <input type="text" class="form-control" id="name" name="name" #name="ngModel" [(ngModel)]="user.name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" #email="ngModel" [(ngModel)]="user.email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" #password="ngModel"
+          [(ngModel)]="user.password">
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary  mt-4" (click)="create()">Create</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

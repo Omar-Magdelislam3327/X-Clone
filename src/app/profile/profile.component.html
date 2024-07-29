@@ -1,0 +1,129 @@
+<div class="profile" *ngIf="user">
+  <nav class="d-flex align-items-center justify-content-start gap-4">
+    <i class="fa-solid fa-arrow-left-long ms-3"></i>
+    <div class="user">
+      <h5 class="m-0 p-0">{{user.name}}</h5>
+      <p class="m-0 pb-1">1 posts</p>
+    </div>
+  </nav>
+  <div class="newnav d-lg-none d-md-none d-sm-block">
+    <div class="nav p-1">
+      <i class="bi bi-house-door-fill fs-1 text-white"></i>
+      <i class="fa-solid fa-magnifying-glass fs-1 text-white"></i>
+      <i class="fa-regular fa-bell fs-1 text-white"></i>
+      <i class="fa-regular fa-envelope fs-1 text-white"></i>
+      <i class="fa-solid fa-list fs-1 text-white"></i>
+      <i class="fa-solid fa-user-group fs-1 text-white"></i>
+    </div>
+  </div>
+  <section class="my-profile">
+    <div class="back">
+      <img class="img-fluid" src="{{user.background}}" alt="">
+    </div>
+    <div class="pic">
+      <img width="100" src="{{user.image}}" alt="">
+      <button class="btn-edit" (click)="openModal(editProfileModal)">Edit Profile</button>
+    </div>
+    <div class="info p-3 mt-5">
+      <h5 class="m-0 p-0">{{user.name}}</h5>
+      <p class="m-0 pb-2">{{user.hashtag}}</p>
+      <p class="m-0 pb-2 text-white">{{user.bio}}</p>
+      <div class="d-flex align-items-center mb-2">
+        <p class="m-0 p-0"><i class="fa-solid fa-location-dot"></i> {{user.location}}</p>
+        <p class="m-0 ms-3 p-0"><i class="fa-solid fa-calendar-days"></i> Joined April 2023</p>
+
+      </div>
+      <div class="followingg d-flex gap-4">
+        <p><span>94</span> Following</p>
+        <p><span>8</span> Followers</p>
+      </div>
+    </div>
+    <div class="links">
+      <div class="links d-flex align-items-center text-center">
+        <div class="posts col">
+          <p class="fw-bold">Posts</p>
+        </div>
+        <div class="replies col">
+          <p class="fw-bold text-white-50">Replies</p>
+        </div>
+        <div class="highlights col">
+          <p class="fw-bold text-white-50">Highlights</p>
+        </div>
+        <div class="media col">
+          <p class="fw-bold text-white-50">Media</p>
+        </div>
+        <div class="likes col">
+          <p class="fw-bold text-white-50">Likes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="post post-ar" *ngFor="let tweet of tweets">
+    <div class="cond" *ngIf="tweet.accName === 'Omar3327'">
+      <div class="upper pt-3 ps-3 d-flex align-items-center justify-content-start text-center gap-3 p-0 ">
+        <div class="imag">
+          <img class="img-fluid rounded " src="{{tweet.logo}}" alt="">
+        </div>
+        <div class="txt d-flex flex-column align-items-center justify-content-center">
+          <div class="user d-flex align-items-center justify-content-start gap-2">
+            <p class="p-0 username">{{tweet.accName}}</p>
+            <p class="p-0 other">{{tweet.hashtag}}</p>
+            <p class="p-0 other">{{tweet.date}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="caption text-end">
+        <p class="me-3 text-white">{{tweet.caption}}</p>
+      </div>
+      <img class="pb-2 rounded ms-auto pe-2 d-block img-fluid col-11" src="{{tweet.image}}" onclick="openImage(this.src)" alt="">
+      <div class="icons2 d-flex gap-5 justify-content-between">
+        <div class="lft ms-lg-5">
+          <i class="fa-regular fa-comment"></i>{{tweet.comments}}
+          <i class="fa-solid fa-retweet"></i>{{tweet.retweet}}
+          <i class="fa-regular fa-heart"></i>{{tweet.heart}}
+          <i class="fa-regular fa-eye"></i>{{tweet.views}}
+        </div>
+        <div class="rigt me-lg-3">
+          <i class="fa-regular fa-bookmark"></i>
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Edit Profile Modal -->
+  <ng-template #editProfileModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title text-white">Edit Profile</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form #editProfileForm="ngForm">
+        <div class="form-group mb-3">
+          <label for="name" class="form-label shdow-none">Name</label>
+          <input type="text" id="name" [(ngModel)]="editUser.name" name="name" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+          <label for="bio" class="form-label">Bio</label>
+          <input type="text" id="bio" [(ngModel)]="editUser.bio" name="bio" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" id="location" [(ngModel)]="editUser.location" name="location" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+          <label for="image" class="form-label">Profile Image</label>
+          <input type="text" id="image" [(ngModel)]="editUser.image" name="image" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+          <label for="background" class="form-label">Profile Background</label>
+          <input type="text" id="background" [(ngModel)]="editUser.background" name="background" class="form-control">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="updateProfile()">Save</button>
+    </div>
+  </ng-template>
+</div>
